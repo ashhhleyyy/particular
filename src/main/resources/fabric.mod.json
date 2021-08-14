@@ -1,9 +1,9 @@
 {
     "schemaVersion": 1,
-    "id": "${MOD_ID}",
+    "id": "ash-servjam",
     "version": "${version}",
-    "name": "${MOD_NAME}",
-    "description": "${MOD_DESCRIPTION}",
+    "name": "Ash's servjam mod",
+    "description": "My mod for Servjam 2021",
     "authors": [
         "Ash (ashisbored)"
     ],
@@ -11,7 +11,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "io.github.ashisbored.${MOD_ID}.${MOD_CLASS}"
+            "io.github.ashisbored.ash-servjam.ServjamMod"
         ]
     },
     "depends": {

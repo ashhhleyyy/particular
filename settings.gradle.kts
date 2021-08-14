@@ -12,7 +12,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "${MOD_NAME}"
+rootProject.name = "Ash's servjam mod"
 
 enableFeaturePreview("VERSION_CATALOGS")
 
