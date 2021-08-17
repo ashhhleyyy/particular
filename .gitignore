@@ -6,3 +6,5 @@ build/
 out/
 # Gradle project cache
 .gradle/
+# Minecraft files
+run/

@@ -1,9 +1,9 @@
 {
     "schemaVersion": 1,
-    "id": "ash-servjam",
+    "id": "particular",
     "version": "${version}",
-    "name": "Ash's servjam mod",
-    "description": "My mod for Servjam 2021",
+    "name": "Particular",
+    "description": "API for more advanced server-side particle effects",
     "authors": [
         "Ash (ashisbored)"
     ],
@@ -11,7 +11,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "io.github.ashisbored.ash-servjam.ServjamMod"
+            "io.github.ashisbored.particular.Particular"
         ]
     },
     "depends": {

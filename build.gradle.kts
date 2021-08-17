@@ -6,6 +6,7 @@ plugins {
 
 version = "1.0.0"
 group = "io.github.ashisbored"
+val env: Map<String, String> = System.getenv()
 
 repositories {
 
@@ -44,5 +45,32 @@ tasks.withType<JavaCompile> {
 tasks.jar {
     from("LICENSE") {
         rename { "${it}_${project.name}" }
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            artifact(tasks.remapSourcesJar) {
+                builtBy(tasks.remapSourcesJar)
+            }
+            artifact(tasks.jar) {
+                builtBy(tasks.remapJar)
+            }
+        }
+    }
+
+    repositories {
+        if (env["MAVEN_URL"] != null) {
+            maven {
+                url = uri(env["MAVEN_URL"]!!)
+                credentials {
+                    username = env["MAVEN_USERNAME"]
+                    password = env["MAVEN_PASSWORD"]
+                }
+            }
+        } else {
+            mavenLocal()
+        }
     }
 }
